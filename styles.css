@@ -1,128 +1,559 @@
-@import url("style.css");
+/* Variables */
 
-.bg-dark {
-	background-color: #101010 !important;
+:root {
+	/* Colors */
+	--color-purple: #C271FF;
+	--color-purple-faded: #cd95e9;
+	--color-white: #FFFFFF;
+	--color-black: #101010;
+	--color-green: #82D24F;
 }
 
-.nav-link {
-	color: white;
-}
+/* Base */
 
-.purple-bg {
-	background-color: #C271FF;
-}
-
-.purple {
-	color: #C271FF;
+body {
+	font-family: 'Inknut Antiqua', serif, !important;
+	margin: 0 auto !important;
+	max-width: 87.5rem;
 }
 
 .btn {
-	background-color: #C271FF;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
-	border-color: #C271FF;
+	background-color: var(--color-purple);
+	color: var(--color-white);
+	width: 10rem;
 }
 
-.circle {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	background-color: white;
+.btn:hover {
+	color: var(--color-white);
+	opacity: 0.7;
+	filter: drop-shadow(.2rem .2rem 1rem var(--color-black));
 }
 
-.fb-icon:before {
-	font-family: 'holberton_school-icon';
+h1 {
+	font-size: 3.8125rem;
+	font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+	h1 {
+		font-size: 7.5rem;
+		font-weight: bolder;
+	}
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 100%;
+}
+
+.text-black {
+	color: var(--color-black);
+}
+
+.text-green {
+	color: var(--color-green);
+}
+
+.text-purple {
+	color: var(--color-purple);
+}
+
+.text-white {
+	color: var(--color-white);
+}
+
+@font-face {
+	font-family: 'Inknut Antiqua';
+	src:  url('fonts/InknutAntiqua-Regular.eot');
+	src:  url('fonts/InknutAntiqua-Regular.eot') format('embedded-opentype'),
+	  url('fonts/InknutAntiqua-Regular.ttf') format('truetype'),
+	  url('fonts/InknutAntiqua-Regular.woff') format('woff'),
+	  url('fonts/InknutAntiqua-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+	font-size: 100%;
+}
+
+/* Header */
+
+.awards {
+	width: 100%;
+}
+
+.awards .rounded-circle {
+	height: 9.375rem;
+	width: 9.375rem;
+}
+
+.awards .card-transparent {
+	width: 9.375rem;
+}
+
+.awards p {
+	font-size: 1em;
+}
+
+.grouping {
+	width: 100%;
+}
+
+header h1 {
+	margin-top: 9.3rem;
+	margin-bottom: -.5rem;
+}
+
+header p {
+	font-size: 2rem;
+	margin-top: 9.5rem;
+}
+
+.logo-H {
+	height: 5rem;
+	width: 5rem;
+}
+
+.logo-text {
+	height: 1.75rem;
+}
+
+nav {
+	width: 20rem;
+}
+
+.navbar {
+	width: 87.5%;
+}
+
+.nav-link {
+	font-family: 'Inknut Antiqua';
+	color: var(--color-white);
+}
+
+.nav-link:hover, .navbar-brand:hover {
+	color: var(--color-purple);
+	filter: drop-shadow(.1rem .1rem .25rem var(--color-black));
+	box-shadow: 0 4px 1px -2px white;
+}
+
+.page-header {
+	background-image: url(../images/pic_1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: var(--color-black);
+	height: 68.31rem;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.page-header {
+		background-image: url(../images/pic_1.jpg);
+		background-position: top;
+		background-repeat: no-repeat;
+		height: 90rem;
+		width: 100%;
+	}
+}
+
+/* Hamburger */
+
+.navbar-toggler, .mobile-label {
+	height: 1.875rem;
+	width: 1.875rem;
+
+	font-family: 'Inknut Antiqua' !important;
+	font-size: 1.875rem;
+	font-weight: 100;
+
+	left: 1.5rem;
+	border: none;
+}
+
+.mobile-label {
+	top: 1.9rem;
+}
+
+.mobile-label:before {
+	content: "\e911";
+}
+
+.navbar-toggler {
+	top: 2.3rem;
+}
+
+@media (min-width: 768px) {
+	.navbar-toggler {
+		left: -25rem;
+	}
+}
+
+/* Spinners */
+
+.spinner-border {
+	margin: auto;
+	width: 3rem;
+	height: 3rem;
+}
+
+/* Testimonials */
+
+[class^="carousel-arrow-"] {
+	height: 3.916875rem;
+}
+
+@media (min-width: 768px) {
+
+	.carousel-arrow-prev-testimonial {
+		margin-right: 8.5rem;
+	}
+
+	.carousel-arrow-next-testimonial {
+		margin-left: 8.5rem;
+	}
+}
+
+.testimonials {
+	height: 24.5rem;
+	background-color: var(--color-purple);
+}
+
+@media (max-width: 768px) {
+	.testimonials {
+		height: 35rem;
+	}
+}
+
+.testimonials .rounded-circle {
+	height: 10rem;
+	width: 10rem;
+}
+
+.testimonial-text {
+	font-size: 1.375em;
+}
+
+/* Tutorials */
+
+.duration {
+	margin: -.25rem 0 0 6rem;
+}
+
+.page-wrapper {
+	gap: 2rem;
+}
+
+.star-rating {
+	height: 1rem;
+}
+
+.tutorial-card {
+	height: 20.9375rem;
+	width: 15.9375rem;
+}
+
+.tutorial-profile {
+	height: 1.875rem;
+}
+
+.tutorials {
+	height: 38rem;
+}
+
+.tutorials .page-wrapper {
+	margin: 0 .75rem;
+}
+
+.tutorials .title {
+	margin: -.5rem 0 5rem 0;
+}
+
+.tutorials .carousel-inner .carousel-item.active,
+.tutorials .carousel-inner .carousel-item-next,
+.tutorials .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+  .tutorials .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .tutorials .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+/* display 4 */
+@media (min-width: 768px) {
+    
+    .tutorials .carousel-inner .carousel-item-right.active,
+    .tutorials .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .tutorials .carousel-inner .carousel-item-left.active, 
+    .tutorials .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.tutorials .carousel-inner .carousel-item-right,
+.tutorials .carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+.video_pb {
+	height: 4rem;
+	z-index: 100px;
+	margin: -10rem 0 0 4.8rem;
+}
+
+/* Membership */
+
+.membership {
+	height: 31.375rem;
+	background-color: var(--color-black);
+}
+
+@media (max-width: 768px) {
+	.membership {
+		height: 40rem;
+	}
+}
+
+.membership .benefits {
+	width: 12rem;
+}
+
+.membership img {
+	height: 2.25rem;
+}
+
+/* Latest Videos */
+
+.videos {
+	height: 38rem;
+}
+
+.videos .page-wrapper {
+	margin: 0 .75rem;
+}
+
+.videos .carousel-inner .carousel-item.active,
+.videos .carousel-inner .carousel-item-next,
+.videos .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+  .videos .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .videos .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+/* display 4 */
+@media (min-width: 768px) {
+    
+    .videos .carousel-inner .carousel-item-right.active,
+    .videos .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .videos .carousel-inner .carousel-item-left.active, 
+    .videos .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.videos .carousel-inner .carousel-item-right,
+.videos .carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+/* Footer */
+
+.facebook:before {
 	content: "\e908";
 	color: var(--color-white);
 }
 
-.twitter-icon:before {
-	font-family: 'holberton_school-icon';
-	content: "\e90f";
-	color: var(--color-white);
-}
-
-.insta-icon:before {
-	font-family: 'holberton_school-icon';
+.instagram:before {
 	content: "\e90a";
 	color: var(--color-white);
 }
 
-.display-4 {
-	color: white;
+footer {
+	height: 15.5625rem;
+	background-color: var(--color-black);
+	padding: 0 10rem;
 }
 
-.leftArrow:before {
-	content: "\e903";
-	font-size: 8rem;
+.footer-nav {
+	height: 10rem;
 }
 
-.rightArrow:before {
-	content: "\e902";
-	font-size: 8rem;
+@media (max-width: 768px) {
+	.logo {
+		margin-bottom: 2rem;
+	}
 }
 
-.leftArrowVideo:before {
-	content: '\e903';
-	font-size: 8rem;
-	color: black;
+.social {
+	width: 8.5rem;
 }
 
-.rightArrowVideo {
-	background-image: url('images/arrow_black_right.png');
-	font-size: 8rem;
-	color: black;
+.social-icon {
+	font-family: 'Inknut Antiqua' !important;
+	font-size: 2em;
 }
 
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-    display: inline-block;
-    width: 29px;
-    height: 62px;
-    background: no-repeat 50%/100% 100%
-}
-.carousel-control-prev-icon.white {
-    background-image: url("./images/arrow_white_left.png");
-}
-.carousel-control-next-icon.white {
-    background-image: url("./images/arrow_white_right.png");
-}
-.carousel-control-prev-icon.black {
-    background-image: url("./images/arrow_black_left.png");
-}
-.carousel-control-next-icon.black {
-    background-image: url("/images/arrow_black_right.png");
+.twitter:before {
+	content: "\e90f";
+	color: var(--color-white);
 }
 
-.loader {
-    border: 10px solid #f3f3f3;
-    border-top: 10px solid #C271FF;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    animation: spin 5s cubic-bezier(0.075, 0.82, 0.165, 5) infinite;
-    margin: auto;
+/* !!! Pricing Page !!! */
+
+/* Header */
+
+.check-mark:before {
+	font-family: 'Inknut Antiqua' !important;
+	content: "\e905";
+	font-size: 2rem;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.go-pro {
+	font-size: 3.75rem;
+	margin-top: 4rem;
 }
 
-/* Pre-pre-LD */
-.dropdown-item a:hover {
-	color: #C271FF !important;
+.features-row {
+	height: 3rem;
 }
 
-#sort-by:focus,
-#sort-by:hover,
-#topic:focus,
-#topic:hover {
-	background-color: #C271FF;
+.logo-H-title {
+	height: 2rem;
 }
 
-.bg-white.d-flex.flex-row.border-bottom.border-top-0.border-left-0.border-right-0.rounded-top {
-    height: 60.4px;
+.logo-text-title {
+	height: 3rem;
+}
+
+.pricing-header {
+	background-image: url(../images/pic_2.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-color: var(--color-black);
+	height: 80rem;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.pricing-header {
+		background-image: url(../images/pic_2.jpg);
+		background-position: top;
+		background-repeat: no-repeat;
+		height: 90rem;
+		width: 100%;
+	}
+}
+
+.signal {
+	height: 2.1875rem;
+}
+
+.what-is {
+	margin-top: 12rem;
+}
+
+/* FAQ */
+
+.question {
+	max-width: 25rem;
+}
+
+/* !!! Courses Page !!! */
+
+/* Header */
+
+.courses-header {
+	background-image: url(../images/pic_3.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+	background-color: var(--color-black);
+	height: 15rem;
+	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.courses-header {
+		background-image: url(../images/pic_3.jpg);
+		background-position: top;
+		background-repeat: no-repeat;
+		height: auto;
+		width: 100%;
+	}
+}
+
+.courses-title {
+	font-family: 'Inknut Antiqua';
+	font-size: 2em;
+	width: 40rem;
+}
+
+.mobile-nav-div {
+	height: 3rem;
+}
+
+/* Seach Bar */
+
+.form-control {
+	background-color: var(--color-purple-faded);
+	color: var(--color-white);
+}
+
+.form-control:focus {
+	background-color: var(--color-purple-faded);
+	color: var(--color-white);
+	box-shadow: none;
+}
+
+.form-control::placeholder {
+	color: var(--color-white);
+}
+
+.search-bar {
+	background-color: var(--color-purple);
+	height: 8.625rem;
+	padding-top: 2rem;
+}
+
+@media (max-width: 992px) {
+	.search-bar {
+		height: 14rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.search-bar {
+		height: 18.75rem;
+	}
+}
+
+/* Videos */
+
+.videos {
+	height: auto;
+}
+
+.video-card {
+	background-color: var(--color-white);
+}
+
+.video_pb_course {
+	height: 4rem;
+	z-index: 100px;
+	margin: -10rem 0 0 4.8rem;
 }
