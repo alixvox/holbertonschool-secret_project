@@ -163,7 +163,7 @@ function searchBarPopulate () {
 	var $topicMenu = $('#topicMenu');
 	var $sortMenu = $('#sortMenu');
 
-	$.get('https://smileschool-api.hbtn.info/xml/courses', (result) => {
+	$.get('https://api.baserow.io/api/database/rows/table/159720/?user_field_names=true', (result) => {
 		result.childNodes[0].childNodes[0].childNodes.forEach((result) => {
 			var topicTitle = capitalizeFirstLetter(result.textContent);
 			$topicMenu.append(`<option class="bg-white text-body">${topicTitle}</option>`);
@@ -191,10 +191,10 @@ function coursesPopulate() {
 	$('.num-vids').empty();
 	$('#courses .spinner-border').show();
 
-	$.get('https://smileschool-api.hbtn.info/xml/courses', (result) => {
+	$.get('https://api.baserow.io/api/database/rows/table/159720/?user_field_names=true', (result) => {
 		result.childNodes[0].childNodes[5].childNodes.forEach((result) => {
-			if ($keywordValue) {
-				var keyword = capitalizeFirstLetter($keywordValue);
+			if ($results) {
+				var keyword = capitalizeFirstLetter($name);
 				for (let x = 0; x < result.childNodes[7].childNodes.length; x++) {
 					if (keyword === result.childNodes[7].childNodes[x].childNodes[0].data) {
 						courseList.push(result);
@@ -222,7 +222,7 @@ function coursesPopulate() {
 		});
 		setTimeout($('.spinner-border').hide(), 5000);
 		var $coursesInner = $('#courses');
-		$('.num-vids').append(`${courseList.length} videos`);
+		$('.num-vids').append(`${courseList.length} CREATURES`);
 		for (course of courseList) {
 			$coursesInner.append(`<div class="video-card col-12 col-sm-6 col-md-4 col-lg-3 flex-column my-3">
 															<div class="card-pic-${course.attributes[0].value}">
