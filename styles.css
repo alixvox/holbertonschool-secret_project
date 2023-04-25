@@ -2,9 +2,9 @@
 
 :root {
 	/* Colors */
-	--color-purple: #C271FF;
-	--color-purple-faded: #cd95e9;
-	--color-white: #FFFFFF;
+	--color-purple: #ffffff;
+	--color-purple-faded: #ffeccd;
+	--color-white: #ffd28a;
 	--color-black: #101010;
 	--color-green: #82D24F;
 }
@@ -75,6 +75,19 @@ html {
 	font-size: 100%;
 }
 
+@font-face {
+	font-family: 'Tilt Prism';
+	src:  url('fonts/TiltPrism-Regular-VariableFont.eot');
+	src:  url('fonts/TiltPrism-Regular-VariableFont.eot') format('embedded-opentype'),
+	  url('fonts/TiltPrism-Regular-VariableFont.ttf') format('truetype'),
+	  url('fonts/TiltPrism-Regular-VariableFont.woff') format('woff'),
+	  url('fonts/TiltPrism-Regular-VariableFont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+	font-size: 100%;
+}
+
 /* Header */
 
 .awards {
@@ -126,14 +139,26 @@ nav {
 }
 
 .nav-link {
-	font-family: 'Inknut Antiqua';
+	font-size: 2.4rem;
+	font-family: 'Tilt Prism';
 	color: var(--color-white);
 }
 
 .nav-link:hover, .navbar-brand:hover {
 	color: var(--color-purple);
 	filter: drop-shadow(.1rem .1rem .25rem var(--color-black));
-	box-shadow: 0 4px 1px -2px white;
+	box-shadow: 0 4px 1px -2px var(--color-white);
+}
+
+.hero {
+	font-family: 'Tilt Prism';
+	font-size: 3.5rem;
+	text-align: center;
+	color: var(--color-white)
+}
+
+.mom {
+	width: 40rem;
 }
 
 .page-header {
@@ -141,7 +166,7 @@ nav {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-color: var(--color-black);
-	height: 68.31rem;
+	height: 60rem;
 	width: 100%;
 }
 
@@ -214,7 +239,7 @@ nav {
 
 .testimonials {
 	height: 24.5rem;
-	background-color: var(--color-purple);
+	background-color: var(--color-black);
 }
 
 @media (max-width: 768px) {
@@ -375,12 +400,16 @@ nav {
 /* Footer */
 
 .facebook:before {
-	content: "\e908";
+	font-family: 'Tilt Prism';
+
+	content: "f";
 	color: var(--color-white);
 }
 
 .instagram:before {
-	content: "\e90a";
+	font-family: 'Tilt Prism';
+
+	content: "i";
 	color: var(--color-white);
 }
 
@@ -410,7 +439,9 @@ footer {
 }
 
 .twitter:before {
-	content: "\e90f";
+	font-family: 'Tilt Prism';
+
+	content: "t";
 	color: var(--color-white);
 }
 
@@ -511,23 +542,30 @@ footer {
 
 .form-control {
 	background-color: var(--color-purple-faded);
-	color: var(--color-white);
+	color: var(--color-black);
+}
+
+.container {
+	width: 100rem;
+	background-color: var(--color-black);
 }
 
 .form-control:focus {
 	background-color: var(--color-purple-faded);
-	color: var(--color-white);
+	color: var(--color-black);
 	box-shadow: none;
 }
 
 .form-control::placeholder {
-	color: var(--color-white);
+	color: var(--color-black);
 }
 
 .search-bar {
-	background-color: var(--color-purple);
+	background-color: var(--color-black);
 	height: 8.625rem;
 	padding-top: 2rem;
+	font-family: Tilt Prism;
+	color: var(--color-black);
 }
 
 @media (max-width: 992px) {
@@ -549,7 +587,7 @@ footer {
 }
 
 .video-card {
-	background-color: var(--color-white);
+	background-color: var(--color-black);
 }
 
 .video_pb_course {
